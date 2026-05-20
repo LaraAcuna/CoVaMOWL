@@ -140,6 +140,51 @@
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Visualization">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Processing"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Case"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DatasheetInstance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Domain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#HeadVariationPoint"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Problem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VarietyType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Content"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Context"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Processing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Source"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DatasheetInstance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Domain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#HeadVariationPoint"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Problem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Processing"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
