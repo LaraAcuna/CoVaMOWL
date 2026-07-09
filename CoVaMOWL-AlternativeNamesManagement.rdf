@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement/"
+     xml:base="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement">
+        <rdfs:comment xml:lang="es">Ontología para representar el metamodelo (estatico) de CoVaMaT, particularmente para la gestión de denominaciones alternativas de conceptos</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeName">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isAlternativeNameOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasConcept -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasConcept">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isAlternativeNameOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isAlternativeNameOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasDenomination -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasDenomination">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasLanguage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasSystemId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasSystemId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Abbreviation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Acronym"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Community"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Scientific"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Abbreviation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Abbreviation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Acronym -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Acronym">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Community -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Community"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Scientific -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Scientific"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
