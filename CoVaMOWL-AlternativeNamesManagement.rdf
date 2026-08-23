@@ -43,23 +43,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasConcept -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasConcept">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isAlternativeNameOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isAlternativeNameOf"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf"/>
     
 
 
@@ -92,15 +78,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasSystemId -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasSystemId">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole">
@@ -122,9 +99,7 @@
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
     
 
 

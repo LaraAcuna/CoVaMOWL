@@ -25,6 +25,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasResult -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasResult">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isHeadVariationPointOf -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isHeadVariationPointOf">
@@ -44,24 +52,18 @@
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeName -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasConcept -->
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasConcept">
-        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isConceptOf">
-        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isConceptOf"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
     </rdf:Description>
     
 
@@ -73,6 +75,18 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasResultValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasResultValue">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isResultValueOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
     </owl:ObjectProperty>
     
 
@@ -94,6 +108,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isResultValueOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isResultValueOf"/>
+    
+
+
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isSemanticCatalogOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isSemanticCatalogOf"/>
@@ -111,10 +131,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasSystemId -->
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasSystemId">
-        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasSystemId"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </rdf:Description>
     
 
@@ -204,6 +224,66 @@
     
 
 
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ApplicationCase -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ApplicationCase">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContentDatasheet"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContextDatasheet"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ProcessingDatasheet"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SourceDatasheet"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DomainCase -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DomainCase">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#HeadVariationPoint -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#HeadVariationPoint">
@@ -221,11 +301,42 @@
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#StudyDomain"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VarietyType"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticId"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasResultValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -238,8 +349,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -252,22 +362,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasDenomination"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasLanguage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasSystemId"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -280,8 +381,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeName"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -294,8 +394,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -314,29 +413,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDescription"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasName"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasSystemId"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasSourceCatalog"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -386,29 +475,25 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasHomepage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasQueryEndpoint"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasQueryLanguage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasUriNamespace"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -433,6 +518,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
+    
+
+
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog">
@@ -451,36 +542,25 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDescription"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasName"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasSystemId"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasInternalManagement"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasWeight"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointUnionOf rdf:parseType="Collection">
@@ -513,8 +593,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasReferenceId"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -586,19 +665,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticId"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticId"/>
         </owl:members>
