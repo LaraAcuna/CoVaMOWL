@@ -10,6 +10,7 @@
         <owl:imports rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement"/>
         <rdfs:comment xml:lang="es">Ontología para representar el metamodelo (estatico) de CoVaMaT, particularmente para la gestión de datos semánticos</rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -25,26 +26,77 @@
     
 
 
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet">
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con alguna datasheet.
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance">
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con alguna instancia de Datasheet (DatasheetInstance).
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDomainCase -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDomainCase">
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con algun caso de dominio (DomainCase)
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHeadVariationPoint -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHeadVariationPoint">
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase Datasheet para indicar el punto de variación &quot;raiz&quot; (HeadVariationPoint). Es decir, qué variabilidad modela la datasheet.
+Es tanto directa como inversamente funcional: una Datasheet solo puede tener una única raíz de variaciones (pensarlo como estructura de árbol).
+A su vez, un HeadVariationPoint sólo puede existir en una Datasheet. De cambiar esta decisión, eliminar la característica Inversamente Funcional.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasInstantiableVariation -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasInstantiableVariation">
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con alguna variación instanciable (InstantiableVariation).
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasResult -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasResult">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ApplicationCase"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase ApplicationCase para indicar el resultado del caso de aplicación.
+Es inversamente funcional, por lo que una instancia de Result sólo puede existir en un único caso de aplicación.</rdfs:comment>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isHeadVariationPointOf -->
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasStudyDomain -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isHeadVariationPointOf">
-        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isInstantiableVariationOf"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasStudyDomain">
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con algún dominio de estudio (StudyDomain).
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isVarietyTypeOf -->
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasVarietyType -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isVarietyTypeOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasVarietyType">
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con algún tipo de variedad (VarietyType).
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
     </rdf:Description>
     
 
@@ -55,6 +107,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase UserPreference para indicar cual es la denominación (AlternativeName) que se prefiere.</rdfs:comment>
     </rdf:Description>
     
 
@@ -64,6 +117,9 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase AlternativeName para indicar el tipo de denominación alternativa. 
+Utilizar alguna de estas instancias como valor: Abbreviation, Acronym, Community o Scientific.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
     </rdf:Description>
     
 
@@ -75,6 +131,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con algún concepto (Concept).
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -86,7 +144,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase Result para indicar los valores resultantes en detalle.
+Es inversamente funcional, por lo que un ResultValue sólo puede existir en una única instancia de Result.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -98,25 +159,36 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
+        <rdfs:comment xml:lang="es">Se utiliza para indicar que existe relación con algún catalogo semántico (SemanticCatalog).
+No cuenta con dominio asignado, cada clase que necesite utilizarlo lo restringe o deberá restringirlo de forma local.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isConceptOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isConceptOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isConceptOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasConcept
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isResultValueOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isResultValueOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isResultValueOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasResultValue. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isSemanticCatalogOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isSemanticCatalogOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#isSemanticCatalogOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasSemanticCatalog. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
@@ -131,10 +203,51 @@
     
 
 
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDescription -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDescription">
+        <rdfs:comment xml:lang="es">Se utiliza para brindar una descripción.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasName -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasName">
+        <rdfs:comment xml:lang="es">Se utiliza para nombrar a la instancia.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasDenomination -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasDenomination">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase AlternativeName para expresar la denominación alternativa que se refleja.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasLanguage -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasLanguage">
+        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia al lenguaje que se maneja en la instancia.
+Por ejemplo, en la clase AlternativeName se usa para indicar el lenguaje de la denominación alternativa.
+Utilizar el tipo de dato xsd:language.</rdfs:comment>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase UserPreference para indicar el rol de usuario al que se le asigna la preferencia.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
     </rdf:Description>
     
 
@@ -143,7 +256,9 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasHomepage">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="es">Se utiliza para indicar el homepage o sitio principal.
+Utilizar el tipo de dato xsd:anyURI.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -154,6 +269,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">Se utiliza para indicar si el catálogo semántico (SemanticCatalog) es gestionado por las mismas personas que llevan a cabo el estudio de los casos (true), o si se trata de un catálogo externo (false).
+Utilizar el tipo xsd:boolean.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -163,6 +280,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasQueryEndpoint">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia a la ubicación que se utiliza para realizar consultas a la ontología (clase Ontology).
+Utilizar el tipo de dato xsd:anyURI.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -172,6 +291,9 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasQueryLanguage">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Se utiliza para indicar el lenguaje con el que se atienden las consultas.
+Por ejemplo, SPARQL.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -180,7 +302,11 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasReferenceId">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticId"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase SemanticId para indicar la identificación de un concepto en particular para un catálogo semántico en particular.
+Por ejemplo, la URI de un concepto de AGROVOC.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -189,7 +315,10 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasSourceCatalog">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase Concept para indicar el catálogo semántico que se usó para obtener el nombre y descripción del concepto.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -198,7 +327,9 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasUriNamespace">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="es">Se utiliza para indicar el espacio de nombres de la ontología.
+Utilizar el tipo de dato xsd:anyURI.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -209,6 +340,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="es">Se utiliza exclusivamente en la clase SemanticCatalog para indicar el peso o relevancia que tiene el mismo como fuente de conceptos. A mayor número, mayor relevancia (de 0 a 1).
+Utilizar el tipo de dato xsd:double.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -227,6 +360,20 @@
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ApplicationCase -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ApplicationCase">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DatasheetInstance"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDomainCase"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DomainCase"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheetInstance"/>
@@ -272,6 +419,120 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan un caso de aplicación que busca trabajar el problema que se registra en uno o varios casos de dominio (DomainCase).
+
+Se utilizan las propiedades de objeto:
+-hasDatasheetInstance: para indicar las instancias de datasheet que utiliza este caso. Se espera que tenga al menos una instancia para cada variedad de nivel 1 reflejada (Content, Context, Processing, Source).
+-hasDomainCase: para indicar los casos de dominio relacionados.
+-hasResult: para registrar el resultado del caso.
+
+Se utilizan las propiedades de dato:
+-hasDescription: para describir lo trabajado en el caso
+-hasName: para identificar al caso de aplicación con un nombre representativo</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContentDatasheet -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContentDatasheet">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de una datasheet encuadrada en un tipo de variedad especifico (ContentVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Datasheet. Esta clase se usa para inferir y para búsquedas más simplificadas de datasheets existentes de tipo Contenido.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContentVarietyType -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContentVarietyType">
+        <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de contenido, que  identifica variables o factores extraídos de fuentes que son útiles cuando se consideran como
+una característica de análisis</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContextDatasheet -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContextDatasheet">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de una datasheet encuadrada en un tipo de variedad especifico (ContextVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Datasheet. Esta clase se usa para inferir y para búsquedas más simplificadas de datasheets existentes de tipo Contexto.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContextVarietyType -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContextVarietyType">
+        <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de contexto, que denota la situación o las condiciones bajo las cuales se configuran los sistemas basándose en el dominio del problema</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHeadVariationPoint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#HeadVariationPoint"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasStudyDomain"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#StudyDomain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasVarietyType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VarietyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una datasheet, un artefacto central en CoVaMaT para gestionar la variedad.
+
+Se utilizan las propiedades de objeto:
+-hasHeadVariationPoint: para indicar la variabilidad principal que representa la Datasheet, de la cual se desprenderan otras.
+-hasStudyDomain (sólo 1): para encuadrar la datasheet en un dominio de estudio.
+-hasVarietyType (sólo 1): para encuadrar la datasheet en un tipo de variedad.
+
+No se utilizan propiedades de dato.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DatasheetInstance -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DatasheetInstance">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasInstantiableVariation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una instanciación de una Datasheet que selecciona un subconjunto de variedades de la misma (excluyendo la principal, o HeadVariationPoint). Se materializa para reflejar aquellas variedades relevantes en un caso de aplicación.
+
+Se utilizan las propiedades de objeto:
+-hasDatasheet (sólo 1): para indicar de qué Datasheet se obtienen las variaciones.
+-hasInstantiableVariation: para indicar qué variaciones son relevantes.
+
+Se utilizan las propiedades de dato:
+-hasName: para identificar a la instancia con un nombre representativo.</rdfs:comment>
     </rdf:Description>
     
 
@@ -280,6 +541,16 @@
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DomainCase">
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan el caso de dominio que se busca responder mediante un trabajo de análisis.
+
+Se utilizan las propiedades de objeto:
+-hasStudyDomain: para indicar el dominio de estudio encuadrado en el caso.
+
+Se utilizan las propiedades de dato:
+-hasName: para identificar el caso de dominio con un nombre representativo.
+-hasHypotheses: para indicar la hipótesis a confirmar o rechazar.
+-hasRequirements: para indicar lo que se espera obtener del estudio.
+-hasRestrictions: para indicar condiciones que restringen algunos aspectos del caso.</rdfs:comment>
     </rdf:Description>
     
 
@@ -294,6 +565,25 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan la variabilidad principal que gestiona una datasheet.
+ACLARACIÓN: esta clase, en conjunto con SimpleVariation y NestedVariation son clases solapadas (pueden compartir instancias).
+
+Se utilizan las propiedades de objeto:
+-hasConcept (sólo 1): para indicar el concepto estandarizado que refleja esta variedad.
+-hasInstantiableVariation: para indicar las variaciones que se desprenden directamente de ésta (nivel 1). ACLARACIÓN: las sucesivas variaciones (anidadas, nivel 2 en adelante), no se vinculan a ésta.
+
+Se utilizan las propiedades de dato:
+-hasName: nombre para indicar de qué variedad se trata.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una especialización de la clase SemanticCatalog (Ontologias).
+ACLARACIÓN: esta clase es disjunta con sus clases hermanas (Standard, Taxonomy, Vocabulary)
+
+No se utilizan propiedades de objeto además de las heredadas de la clase padre.
+
+Se utilizan las siguientes propiedades de dato, admeás de las heredadas de la clase padre:
+-hasHomepage: para indicar el sitio web principal dónde se puede acceder a más detalles de la ontología.
+-hasQueryEndpoint: para indicar el punto de acceso en dónde realizar consultas a la ontología.
+-hasQueryLanguage: para indicar el lenguaje esperado por el punto de acceso para responder a las consultas.
+-hasUriNamespace: para indicar el prefijo común de las URIs de la ontología.</rdfs:comment>
     </rdf:Description>
     
 
@@ -326,6 +616,46 @@
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticId"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan variedad contenida en datasheets que no sean la principal de las mismas (HeadVariationPoint).
+ACLARACIÓN: esta clase se especializa en SimpleVariation y NestedVariation. Éstas dos, en conjunto con HeadVariationPoint son clases solapadas (pueden compartir instancias).
+
+Se utilizan las propiedades de objeto:
+-hasConcept (sólo 1): para indicar el concepto estandarizado que refleja esta variedad.
+
+Se utilizan las propiedades de dato:
+-hasName: nombre para indicar de qué variedad se trata.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan la variabilidad anidada, es decir, son la variedad principal de sucesivos subárboles de variedad. Utilizar esta clase si se le especializarán más variedades, de lo contrario, utilizar SimpleVariation.
+ACLARACIÓN: esta clase, en conjunto con SimpleVariation y HeadVariationPoint son clases solapadas (pueden compartir instancias).
+
+Además de las propiedades de la clase padre InstantiableVariation, se utilizan las siguientes propiedades de objeto:
+-hasInstantiableVariation: para indicar las variaciones que se desprenden directamente de ésta.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ProcessingDatasheet -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ProcessingDatasheet">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de una datasheet encuadrada en un tipo de variedad especifico (ProcessingVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Datasheet. Esta clase se usa para inferir y para búsquedas más simplificadas de datasheets existentes de tipo Procesamiento.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ProcessingVarietyType -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ProcessingVarietyType">
+        <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de procesamiento, que recopila información
+sobre técnicas para la limpieza de datos y el análisis de datos.
+ACLARACIÓN: esta clase no se instancia, sino sus subclases. Todas ellas son disjuntas entre sí.</rdfs:comment>
     </rdf:Description>
     
 
@@ -333,12 +663,74 @@
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result">
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasResultValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan los resultados obtenidos de un caso de aplicación.
+
+Se utilizan las propiedades de objeto:
+-hasResultValue: para representar cada valor obtenido contenido en este resultado.
+ 
+Se utilizan las propiedades de dato:
+-hasDescription: para describir en términos generales el resultado o conclusión del caso de aplicación.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan variabilidad que no se especializa más, es decir, son hojas en la jerarquía de variedad. Utilizar esta clase si NO se le especializarán más variedades, de lo contrario, utilizar NestedVariationPoint.
+ACLARACIÓN: esta clase, en conjunto con SimpleVariation y HeadVariationPoint son clases solapadas (pueden compartir instancias).
+
+No se utilizan propiedades de objetos ni de datos más allá de los de la clase padre InstantiableVariation.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SourceDatasheet -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SourceDatasheet">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de una datasheet encuadrada en un tipo de variedad especifico (SourceVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Datasheet. Esta clase se usa para inferir y para búsquedas más simplificadas de datasheets existentes de tipo Fuentes.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SourceVarietyType -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SourceVarietyType">
+        <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de las fuentes, que denota los diferentes tipos de fuentes de datos que pueden ser útiles para el problema del dominio, como estructuradas, semiestructuradas y sin estructura, y los métodos de recopilación, como publicación-suscripción, procesamiento de eventos, etc.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#StudyDomain -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#StudyDomain">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan los dominios de estudio en los que se enmarcan los casos de dominio.
+
+No se utilizan propiedades de objeto.
+
+Se utilizan las propiedades de dato:
+-hasName: para identificar al dominio de estudio.
+-hasDescription: para indicar una descripción del dominio en sí.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VarietyType -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VarietyType">
+        <rdfs:comment xml:lang="es">Esta clase existe para formalizar los tipos de variedad con los que se trabajan en un caso de analítica.
+El uso esperado es que cada tipo de variedad tenga una instancia y se utilice ésta para relacionar los distintos elementos que pueden mantener un tipo de variedad asociado.
+ACLARACIÓN: esta clase no se instancia, sino sus subclases. Todas ellas son disjuntas entre sí.
+
+No se utilizan propiedades de objeto ni de dato.</rdfs:comment>
     </rdf:Description>
     
 
@@ -346,31 +738,46 @@
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasDenomination"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasLanguage"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeNameType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasDenomination"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan un nombre alternativo para un concepto. Se materializa para poder vincularle preferencias de usuario.
+
+Se utilizan las propiedades de objeto:
+-hasAlternativeNameType: para indicar el tipo de denominación alternativa.
+-hasConcept: para indicar el concepto al que se le registra el nombre alternativo.
+
+Se utilizan las propiedades de dato:
+-hasDenomination: para indicar la denominación en sí.
+-hasLanguage: para indicar el idioma de la denominación.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeNameType">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan los tipos de denominaciones alternativas que existen. Esta clase se usa a modo Enum.</rdfs:comment>
     </rdf:Description>
     
 
@@ -378,25 +785,33 @@
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#UserPreference">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasAlternativeName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#AlternativeName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#hasUserRole"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan las preferencias de nombres de conceptos para determinados grupos de usuarios.
+
+Se utilizan las propiedades de objeto:
+-hasConcept (sólo 1): para indicar el concepto (Concept) al que se le desea identificar una denominación alternativa preferida.
+-hasAlternativeName (sólo 1): para indicar la denominación alternativa (AlternativeName) en sí, que reemplazará el nombre &quot;estándar&quot; del concepto para el grupo de usuarios.
+
+Se utilizan las propiedades de dato:
+-hasUserRole: para indicar el rol o grupo de usuarios que tienen la preferencia.</rdfs:comment>
     </rdf:Description>
     
 
@@ -428,6 +843,15 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan un concepto o idea del mundo. Se materializa para poder vincularlo a catálogos semánticos y poder extraer más información a partir de ellos, así como posibilitar una búsqueda exploratoria que pueda aportar utilidad a la hora de reusar casos.
+
+Se utilizan las propiedades de objeto:
+-hasVarietyType: para indicar el tipo de variedad asociada al concepto.
+
+Se utilizan las propiedades de dato:
+-hasName: para indicar el nombre del concepto
+-hasDescription: para indicar una descripción del concepto. Útil cuando muchos conceptos de distintos dominios comparten el mismo nombre.
+-hasSourceCatalog: para indicar el catálogo de dónde se extrajo la información de su nombre y descripción.</rdfs:comment>
     </owl:Class>
     
 
@@ -446,6 +870,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de un concepto utilizado para variedad de contenido (ContentVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Concept. Esta clase se usa para inferir y para búsquedas más simplificadas de conceptos existentes de tipo Contenido.</rdfs:comment>
     </owl:Class>
     
 
@@ -464,6 +891,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de un concepto utilizado para variedad de contexto (ContextVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Concept. Esta clase se usa para inferir y para búsquedas más simplificadas de conceptos existentes de tipo Contexto.</rdfs:comment>
     </owl:Class>
     
 
@@ -475,7 +905,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasHomepage"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -493,9 +923,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasUriNamespace"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una especialización de la clase SemanticCatalog (Ontologías).
+ACLARACIÓN: esta clase es disjunta con sus clases hermanas (Standard, Taxonomy, Vocabulary)
+
+No utiliza propiedades de objeto más allá de las heredadas.
+
+Además de las heredadas, se utilizna las propiedades de dato:
+-hasHomepage: para indicar el sitio web oficial de la ontología, para obtener más detalles.
+-hasQueryEndpoint: para indicar el punto de acceso a utilizar para realizar consultas a la ontología.
+-hasQueryLanguage: para indicar el lenguaje de consultas esperado por el punto de acceso.
+-hasUriNamespace: para indicar el prefijo común de las URI de los conceptos mantenidos por la ontología.</rdfs:comment>
     </owl:Class>
     
 
@@ -514,13 +954,19 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de un concepto utilizado para variedad de procesamiento (ProcessingVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Concept. Esta clase se usa para inferir y para búsquedas más simplificadas de conceptos existentes de tipo Procesamiento.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#ResultValue">
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan valores particulares de resultado.
+ACLARACIÓN: esta clase se utiliza como plantilla para ser especializada según se necesite, debido a la gran amplitud de formas de representar u obtener valores en un estudio de analítica. Por lo tanto, NO se espera que se utilice directamente esta clase, sino que se creen subclases acorde y creen instancias de éstas.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -569,6 +1015,17 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Taxonomy"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Vocabulary"/>
         </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan un catálogo que mantiene conceptos estandarizados.
+
+Se utilizan las propiedades de objeto:
+-hasConcept: para indicar todos los conceptos (Concept) registrados en CoVaMaT que existen en el catálogo.
+-hasVarietyType: para indicar el o los tipos de variedad (VarietyType) que pueden obtenerse en este catálogo.
+
+Se utilizan las propiedades de dato:
+-hasName: para identificar el nombre o identificacion del catálogo.
+-hasDescription: para describir en qué se especializa o qué tipo de conceptos mantiene el catálogo de forma general.
+-hasInternalManagement: para indicar si el catálogo semántico es propio y mantenido internamente o no.
+-hasWeight: para indicar la relevancia de uso del catálogo.</rdfs:comment>
     </owl:Class>
     
 
@@ -576,26 +1033,34 @@
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticId -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticId">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasSemanticCatalog"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasReferenceId"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasConcept"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Concept"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasSemanticCatalog"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#hasReferenceId"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan el id semántico que se utiliza para identificar un concepto (Concept) dentro de un catálogo semántico en particular (SemanticCatalog)
+
+Se utilizan las propiedades de objeto:
+-hasConcept (sólo 1): para indicar el concepto que se quiere referenciar
+-hasSemanticCátalog (sólo 1): para indicar el catálogo semántico en dónde utilizar la identificación
+
+Se utilizan las propiedades de dato:
+-hasReferenceId: para indicar la identificación en sí</rdfs:comment>
     </owl:Class>
     
 
@@ -614,6 +1079,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una clasificación automática para decir que se trata de un concepto utilizado para variedad de fuentes (SourceVarietyType).
+
+Idealmente no se crea una instancia de esta clase, sino de la clase padre Concept. Esta clase se usa para inferir y para búsquedas más simplificadas de conceptos existentes de tipo Fuentes.</rdfs:comment>
     </owl:Class>
     
 
@@ -622,6 +1090,10 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Standard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una especialización de la clase SemanticCatalog (Estándares).
+ACLARACIONES: 
+-Debido a que para la version 1.0 de CoVaMOWL el foco está puesto en ontologías, esta clase fue colocada de forma genérica y debe especializarse con atributos y relaciones
+-esta clase es disjunta con sus clases hermanas (Ontology, Taxonomy, Vocabulary)</rdfs:comment>
     </owl:Class>
     
 
@@ -630,6 +1102,10 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Taxonomy">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una especialización de la clase SemanticCatalog (Taxonomias).
+ACLARACIONES: 
+-Debido a que para la version 1.0 de CoVaMOWL el foco está puesto en ontologías, esta clase fue colocada de forma genérica y debe especializarse con atributos y relaciones
+-esta clase es disjunta con sus clases hermanas (Ontology, Standard, Vocabulary)</rdfs:comment>
     </owl:Class>
     
 
@@ -638,7 +1114,80 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#Vocabulary">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#SemanticCatalog"/>
+        <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan una especialización de la clase SemanticCatalog (Vocabularios).
+ACLARACIONES: 
+-Debido a que para la version 1.0 de CoVaMOWL el foco está puesto en ontologías, esta clase fue colocada de forma genérica y debe especializarse con atributos y relaciones
+-esta clase es disjunta con sus clases hermanas (Ontology, Taxonomy, Standard)</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#AnalyticsVarietyType">
+        <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de procesamiento, particularmente sobre técnicas para el análisis de datos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#PreprocessingVarietyType">
+        <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de procesamiento, particularmente sobre técnicas para la limpieza y reestructuración de datos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VisualizationVarietyType">
+        <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de procesamiento, particularmente sobre técnicas para visualizar y presentar los resultados al usuario.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHypotheses">
+        <rdfs:comment xml:lang="es">Se utiliza para describir la suposición a comprobar o rechazar para alcanzar el o los requerimientos.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRequirements">
+        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia a lo que se espera obtener, analizar o lograr en un caso de dominio.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRestrictions">
+        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia a las condiciones bajo las que se ejecuta el requisito.
+Por ejemplo, restricciones sobre políticas o accesibilidad de los datos.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetInstanceOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasDatasheetInstance. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasDatasheet. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDomainCaseOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasDomainCase. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isHeadVariationPointOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasHeadVariationPoint. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isInstantiableVariationOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasInstantiableVariation. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isResultOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasResult. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isStudyDomainOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasStudyDomain. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isVarietyTypeOf">
+        <rdfs:comment>Es la propiedad inversa de hasVarietyType. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#isAlternativeNameOf">
+        <rdfs:comment xml:lang="es">Es la propiedad inversa de hasAlternativeName. 
+Salvo excepciones, utilizar dicha propiedad y dejar esta para inferencia.</rdfs:comment>
+    </rdf:Description>
     
 
 

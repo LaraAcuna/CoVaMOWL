@@ -82,17 +82,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasNestedVariationPoint -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasNestedVariationPoint">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasInstantiableVariation"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isNestedVariationPointOf"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
-        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasSimpleVariation"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasResult -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasResult">
@@ -100,16 +89,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasSimpleVariation -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasSimpleVariation">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasInstantiableVariation"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isSimpleVariationOf"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
     </owl:ObjectProperty>
     
 
@@ -138,25 +117,19 @@
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetInstanceOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetInstanceOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetInstanceOf"/>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetOf"/>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDomainCaseOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDomainCaseOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDomainCaseOf"/>
     
 
 
@@ -168,31 +141,13 @@
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isInstantiableVariationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isInstantiableVariationOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isNestedVariationPointOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isNestedVariationPointOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isInstantiableVariationOf"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isInstantiableVariationOf"/>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isResultOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isResultOf"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isSimpleVariationOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isSimpleVariationOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isInstantiableVariationOf"/>
-    </owl:ObjectProperty>
     
 
 
@@ -207,9 +162,7 @@
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isVarietyTypeOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isVarietyTypeOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isVarietyTypeOf"/>
     
 
 
@@ -290,12 +243,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ApplicationCase">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDomainCase"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DomainCase"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasResult"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Result"/>
             </owl:Restriction>
@@ -370,47 +317,13 @@
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHeadVariationPoint"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#HeadVariationPoint"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasStudyDomain"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#StudyDomain"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasVarietyType"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VarietyType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet"/>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DatasheetInstance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DatasheetInstance">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasInstantiableVariation"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasDatasheet"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#Datasheet"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasName"/>
