@@ -5,7 +5,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:AlternativeNamesManagement="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#"
+     xmlns:CoVaMOWL-VarietyManagement="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#"
+     xmlns:CoVaMOWL-SemanticDataManagement="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement">
         <owl:imports rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement"/>
@@ -212,10 +215,38 @@ Utilizar el tipo de dato xsd:string.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHypotheses -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHypotheses">
+        <rdfs:comment xml:lang="es">Se utiliza para describir la suposición a comprobar o rechazar para alcanzar el o los requerimientos.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasName -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasName">
         <rdfs:comment xml:lang="es">Se utiliza para nombrar a la instancia.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRequirements -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRequirements">
+        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia a lo que se espera obtener, analizar o lograr en un caso de dominio.
+Utilizar el tipo de dato xsd:string.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRestrictions -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRestrictions">
+        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia a las condiciones bajo las que se ejecuta el requisito.
+Por ejemplo, restricciones sobre políticas o accesibilidad de los datos.
 Utilizar el tipo de dato xsd:string.</rdfs:comment>
     </rdf:Description>
     
@@ -540,6 +571,29 @@ Se utilizan las propiedades de dato:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DomainCase -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#DomainCase">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasStudyDomain"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#StudyDomain"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHypotheses"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRequirements"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRestrictions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#InstantiableVariation"/>
         <rdfs:comment xml:lang="es">Las instancias de esta clase reflejan el caso de dominio que se busca responder mediante un trabajo de análisis.
 
@@ -1125,6 +1179,386 @@ ACLARACIONES:
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrometeorologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrometeorologia">
+        <CoVaMOWL-VarietyManagement:hasDescription>Ciencia que estudia las condiciones meteorológicas, climáticas e hidrológicas y su interrelación en los procesos de la producción agrícola. La Agrometeorología debe cooperar con la agricultura para utilizar mejor los recursos climáticos y luchar contra las adversidades del tiempo para obtener altos y mejores rendimientos.</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>Agrometeorologia</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrovoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrovoc">
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#context"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento"/>
+        <CoVaMOWL-VarietyManagement:hasDescription>AGROVOC es una ontología que cubre los dominios de agricultura, ciencias forestales, ganaderia, ciencias actuaticas, pesca, acuicultura y nutrición humana.</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>AGROVOC</CoVaMOWL-VarietyManagement:hasName>
+        <CoVaMOWL-SemanticDataManagement:hasHomepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://agrovoc.fao.org/</CoVaMOWL-SemanticDataManagement:hasHomepage>
+        <CoVaMOWL-SemanticDataManagement:hasInternalManagement rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</CoVaMOWL-SemanticDataManagement:hasInternalManagement>
+        <CoVaMOWL-SemanticDataManagement:hasQueryEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://agrovoc.fao.org/sparql</CoVaMOWL-SemanticDataManagement:hasQueryEndpoint>
+        <CoVaMOWL-SemanticDataManagement:hasQueryLanguage>SPARQL</CoVaMOWL-SemanticDataManagement:hasQueryLanguage>
+        <CoVaMOWL-SemanticDataManagement:hasUriNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://aims.fao.org/aos/agrovoc/</CoVaMOWL-SemanticDataManagement:hasUriNamespace>
+        <CoVaMOWL-SemanticDataManagement:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</CoVaMOWL-SemanticDataManagement:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire">
+        <CoVaMOWL-VarietyManagement:hasDescription>Medida de la cantidad de agua presente en el aire en comparación con la mayor cantidad posible que pueda tener el aire a una temperatura dada, expresada en porcentaje</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>Humedad del Aire</CoVaMOWL-VarietyManagement:hasName>
+        <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo">
+        <CoVaMOWL-VarietyManagement:hasDescription>Soil-water content is the basic state characteristic of soil; it expresses the relative quantity of water in the soil. Soil-water content can be expressed as the ratio of water amount and the amount of soil.</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>Contenido de agua en el suelo</CoVaMOWL-VarietyManagement:hasName>
+        <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida">
+        <CoVaMOWL-VarietyManagement:hasDescription>Agua en estado líquido que cae de las nubes o se forma en la superficie de la tierra y en los objetos del suelo debido a la condensación del vapor de agua en el aire.</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>Lluvia</CoVaMOWL-VarietyManagement:hasName>
+        <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa">
+        <CoVaMOWL-VarietyManagement:hasDescription>Temperature is a physical quantity that quantitatively expresses the attribute of hotness or coldness.</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>Temperatura</CoVaMOWL-VarietyManagement:hasName>
+        <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento">
+        <CoVaMOWL-VarietyManagement:hasDescription>Winds are currents of air that move across the earth’s surface and develop when two adjacent air masses have different densities. The movement of air masses above the earth’s surface helps to create wind, and help to move the air masses that predict our weather.</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>Viento</CoVaMOWL-VarietyManagement:hasName>
+        <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#casoApUnoCuencaMed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#casoApUnoCuencaMed">
+        <CoVaMOWL-VarietyManagement:hasDatasheetInstance rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#dsiMeteorologia"/>
+        <CoVaMOWL-VarietyManagement:hasDomainCase rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#casoDominioFluctuacionesNapas"/>
+        <CoVaMOWL-VarietyManagement:hasDescription>Se estudia un acuifero ubicado en la zona kárstica. Freatimetros ubicados en área suburbana dentro del campus de la universidad de Salento con vegetacion local mixta. Se consideran variables del tipo meteorologicas.</CoVaMOWL-VarietyManagement:hasDescription>
+        <CoVaMOWL-VarietyManagement:hasName>Cuenca en la región mediterránea de Lecce, Italia</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#casoDominioFluctuacionesNapas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#casoDominioFluctuacionesNapas">
+        <CoVaMOWL-VarietyManagement:hasStudyDomain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrometeorologia"/>
+        <CoVaMOWL-VarietyManagement:hasHypotheses>La variedad de contexto meteorologico y de entorno influye en las fluctuaciones del nivel freatico</CoVaMOWL-VarietyManagement:hasHypotheses>
+        <CoVaMOWL-VarietyManagement:hasName>Factores que se relacionan con fluctuaciones de cuerpos de agua subterraneos o napas freaticas</CoVaMOWL-VarietyManagement:hasName>
+        <CoVaMOWL-VarietyManagement:hasRequirements>Estudiar diferencias de efectos del clima para acuiferos ubicados en distintas zonas</CoVaMOWL-VarietyManagement:hasRequirements>
+        <CoVaMOWL-VarietyManagement:hasRestrictions>Existen casos de estudio en Patagonia Norte, cuyos datos son privados (provenientes de INTA Argentina)</CoVaMOWL-VarietyManagement:hasRestrictions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#context -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#context"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#dsMeteorologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#dsMeteorologia">
+        <CoVaMOWL-VarietyManagement:hasHeadVariationPoint rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#meteorologia"/>
+        <CoVaMOWL-VarietyManagement:hasStudyDomain rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrometeorologia"/>
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#dsiMeteorologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#dsiMeteorologia">
+        <CoVaMOWL-VarietyManagement:hasDatasheet rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#dsMeteorologia"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionReal"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAire"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSuelo"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquida"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativa"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#viento"/>
+        <CoVaMOWL-VarietyManagement:hasName>Estudio en Cuenca Mediterranea</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracion">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionPotencial"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionReal"/>
+        <CoVaMOWL-VarietyManagement:hasName>Evapotranspiracion</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionPotencial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionPotencial">
+        <CoVaMOWL-VarietyManagement:hasName>evapotranspiracionPotencial</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionReal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionReal">
+        <CoVaMOWL-VarietyManagement:hasName>Evapotranspiracion Real</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAire">
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire"/>
+        <CoVaMOWL-VarietyManagement:hasName>Humedad Relativa del Aire</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAireAgrovoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAireAgrovoc">
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire"/>
+        <CoVaMOWL-SemanticDataManagement:hasSemanticCatalog rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrovoc"/>
+        <CoVaMOWL-SemanticDataManagement:hasReferenceId>http://aims.fao.org/aos/agrovoc/c_6496</CoVaMOWL-SemanticDataManagement:hasReferenceId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAireCientifico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAireCientifico">
+        <AlternativeNamesManagement:hasAlternativeName rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAtm"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire"/>
+        <AlternativeNamesManagement:hasUserRole>Cientifico</AlternativeNamesManagement:hasUserRole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAtm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAtm">
+        <AlternativeNamesManagement:hasAlternativeNameType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/AlternativeNamesManagement#Scientific"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire"/>
+        <AlternativeNamesManagement:hasDenomination>Humedad Atmosférica</AlternativeNamesManagement:hasDenomination>
+        <AlternativeNamesManagement:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">es</AlternativeNamesManagement:hasLanguage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadRelativa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadRelativa">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAire"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSuelo"/>
+        <CoVaMOWL-VarietyManagement:hasName>Humedad Relativa</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSuelo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSuelo">
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo"/>
+        <CoVaMOWL-VarietyManagement:hasName>Humedad Relativa del Suelo</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSueloAgrovoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSueloAgrovoc">
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo"/>
+        <CoVaMOWL-SemanticDataManagement:hasSemanticCatalog rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrovoc"/>
+        <CoVaMOWL-SemanticDataManagement:hasReferenceId>http://aims.fao.org/aos/agrovoc/c_7208</CoVaMOWL-SemanticDataManagement:hasReferenceId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#lluvia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#lluvia">
+        <CoVaMOWL-VarietyManagement:hasName>Lluvia</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#meteorologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#meteorologia">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracion"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadRelativa"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacion"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativa"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#viento"/>
+        <CoVaMOWL-VarietyManagement:hasName>Meteorologia</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacion">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionEstado"/>
+        <CoVaMOWL-VarietyManagement:hasName>Precipitacion</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionEstado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionEstado">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquida"/>
+        <CoVaMOWL-VarietyManagement:hasName>Precipitacion Segun Estado</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquida -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquida">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#lluvia"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rocio"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida"/>
+        <CoVaMOWL-VarietyManagement:hasName>Precipitacion Liquida</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquidaAgrovoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquidaAgrovoc">
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida"/>
+        <CoVaMOWL-SemanticDataManagement:hasSemanticCatalog rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrovoc"/>
+        <CoVaMOWL-SemanticDataManagement:hasReferenceId>http://aims.fao.org/aos/agrovoc/c_6435</CoVaMOWL-SemanticDataManagement:hasReferenceId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rafaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rafaga">
+        <CoVaMOWL-VarietyManagement:hasName>Rafaga</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rocio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rocio">
+        <CoVaMOWL-VarietyManagement:hasName>Rocio</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaAire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaAire">
+        <CoVaMOWL-VarietyManagement:hasName>Temperatura del Aire</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativa">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaAire"/>
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaSuelo"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa"/>
+        <CoVaMOWL-VarietyManagement:hasName>Temperatura Relativa</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativaAgrovoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativaAgrovoc">
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa"/>
+        <CoVaMOWL-SemanticDataManagement:hasSemanticCatalog rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrovoc"/>
+        <CoVaMOWL-SemanticDataManagement:hasReferenceId>http://aims.fao.org/aos/agrovoc/c_7657</CoVaMOWL-SemanticDataManagement:hasReferenceId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaSuelo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaSuelo">
+        <CoVaMOWL-VarietyManagement:hasName>temperaturaSuelo</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#viento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#viento">
+        <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rafaga"/>
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento"/>
+        <CoVaMOWL-VarietyManagement:hasName>Viento</CoVaMOWL-VarietyManagement:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#vientoAgrovoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#vientoAgrovoc">
+        <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento"/>
+        <CoVaMOWL-SemanticDataManagement:hasSemanticCatalog rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#agrovoc"/>
+        <CoVaMOWL-SemanticDataManagement:hasReferenceId>http://aims.fao.org/aos/agrovoc/c_8401</CoVaMOWL-SemanticDataManagement:hasReferenceId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Annotations
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1138,19 +1572,6 @@ ACLARACIONES:
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#VisualizationVarietyType">
         <rdfs:comment xml:lang="es">Esta clase representa el tipo de variedad de procesamiento, particularmente sobre técnicas para visualizar y presentar los resultados al usuario.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasHypotheses">
-        <rdfs:comment xml:lang="es">Se utiliza para describir la suposición a comprobar o rechazar para alcanzar el o los requerimientos.
-Utilizar el tipo de dato xsd:string.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRequirements">
-        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia a lo que se espera obtener, analizar o lograr en un caso de dominio.
-Utilizar el tipo de dato xsd:string.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#hasRestrictions">
-        <rdfs:comment xml:lang="es">Se utiliza para hacer referencia a las condiciones bajo las que se ejecuta el requisito.
-Por ejemplo, restricciones sobre políticas o accesibilidad de los datos.
-Utilizar el tipo de dato xsd:string.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#isDatasheetInstanceOf">
         <rdfs:comment xml:lang="es">Es la propiedad inversa de hasDatasheetInstance. 
