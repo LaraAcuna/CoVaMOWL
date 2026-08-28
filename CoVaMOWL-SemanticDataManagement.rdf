@@ -1293,13 +1293,17 @@ ACLARACIONES:
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContentVarietyType"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#context -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#context"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#context">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#ContextVarietyType"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1331,6 +1335,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracion -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionPotencial"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionReal"/>
         <CoVaMOWL-VarietyManagement:hasName>Evapotranspiracion</CoVaMOWL-VarietyManagement:hasName>
@@ -1341,6 +1346,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionPotencial -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionPotencial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-VarietyManagement:hasName>evapotranspiracionPotencial</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
     
@@ -1349,6 +1355,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionReal -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#evapotranspiracionReal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-VarietyManagement:hasName>Evapotranspiracion Real</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
     
@@ -1357,6 +1364,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAire -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire"/>
         <CoVaMOWL-VarietyManagement:hasName>Humedad Relativa del Aire</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
@@ -1397,6 +1405,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadRelativa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadRelativa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadAire"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSuelo"/>
         <CoVaMOWL-VarietyManagement:hasName>Humedad Relativa</CoVaMOWL-VarietyManagement:hasName>
@@ -1407,6 +1416,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSuelo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#humedadSuelo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo"/>
         <CoVaMOWL-VarietyManagement:hasName>Humedad Relativa del Suelo</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
@@ -1426,6 +1436,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#lluvia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#lluvia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-VarietyManagement:hasName>Lluvia</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
     
@@ -1447,6 +1458,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacion -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionEstado"/>
         <CoVaMOWL-VarietyManagement:hasName>Precipitacion</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
@@ -1456,6 +1468,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionEstado -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionEstado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquida"/>
         <CoVaMOWL-VarietyManagement:hasName>Precipitacion Segun Estado</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
@@ -1465,6 +1478,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquida -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#precipitacionLiquida">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#lluvia"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rocio"/>
         <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida"/>
@@ -1486,6 +1500,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rafaga -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rafaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-VarietyManagement:hasName>Rafaga</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
     
@@ -1494,6 +1509,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rocio -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rocio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-VarietyManagement:hasName>Rocio</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
     
@@ -1502,6 +1518,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaAire -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaAire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-VarietyManagement:hasName>Temperatura del Aire</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
     
@@ -1510,6 +1527,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaRelativa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaAire"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaSuelo"/>
         <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa"/>
@@ -1531,6 +1549,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaSuelo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#temperaturaSuelo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#SimpleVariation"/>
         <CoVaMOWL-VarietyManagement:hasName>temperaturaSuelo</CoVaMOWL-VarietyManagement:hasName>
     </owl:NamedIndividual>
     
@@ -1539,6 +1558,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#viento -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#viento">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/4/CoVaMOWL-VarietyManagement#NestedVariationPoint"/>
         <CoVaMOWL-VarietyManagement:hasInstantiableVariation rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#rafaga"/>
         <CoVaMOWL-SemanticDataManagement:hasConcept rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento"/>
         <CoVaMOWL-VarietyManagement:hasName>Viento</CoVaMOWL-VarietyManagement:hasName>
