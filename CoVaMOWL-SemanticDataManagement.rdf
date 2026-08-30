@@ -1221,6 +1221,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadAire">
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
         <CoVaMOWL-VarietyManagement:hasDescription>Medida de la cantidad de agua presente en el aire en comparación con la mayor cantidad posible que pueda tener el aire a una temperatura dada, expresada en porcentaje</CoVaMOWL-VarietyManagement:hasDescription>
         <CoVaMOWL-VarietyManagement:hasName>Humedad del Aire</CoVaMOWL-VarietyManagement:hasName>
         <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
@@ -1231,6 +1232,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cHumedadSuelo">
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
         <CoVaMOWL-VarietyManagement:hasDescription>Soil-water content is the basic state characteristic of soil; it expresses the relative quantity of water in the soil. Soil-water content can be expressed as the ratio of water amount and the amount of soil.</CoVaMOWL-VarietyManagement:hasDescription>
         <CoVaMOWL-VarietyManagement:hasName>Contenido de agua en el suelo</CoVaMOWL-VarietyManagement:hasName>
         <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
@@ -1241,6 +1243,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cPrecipitacionLiquida">
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
         <CoVaMOWL-VarietyManagement:hasDescription>Agua en estado líquido que cae de las nubes o se forma en la superficie de la tierra y en los objetos del suelo debido a la condensación del vapor de agua en el aire.</CoVaMOWL-VarietyManagement:hasDescription>
         <CoVaMOWL-VarietyManagement:hasName>Lluvia</CoVaMOWL-VarietyManagement:hasName>
         <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
@@ -1251,6 +1254,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cTemperaturaRelativa">
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
         <CoVaMOWL-VarietyManagement:hasDescription>Temperature is a physical quantity that quantitatively expresses the attribute of hotness or coldness.</CoVaMOWL-VarietyManagement:hasDescription>
         <CoVaMOWL-VarietyManagement:hasName>Temperatura</CoVaMOWL-VarietyManagement:hasName>
         <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
@@ -1261,6 +1265,7 @@ ACLARACIONES:
     <!-- http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#cViento">
+        <CoVaMOWL-VarietyManagement:hasVarietyType rdf:resource="http://www.semanticweb.org/lara/ontologies/2026/5/CoVaMOWL-SemanticDataManagement#content"/>
         <CoVaMOWL-VarietyManagement:hasDescription>Winds are currents of air that move across the earth’s surface and develop when two adjacent air masses have different densities. The movement of air masses above the earth’s surface helps to create wind, and help to move the air masses that predict our weather.</CoVaMOWL-VarietyManagement:hasDescription>
         <CoVaMOWL-VarietyManagement:hasName>Viento</CoVaMOWL-VarietyManagement:hasName>
         <CoVaMOWL-SemanticDataManagement:hasSourceCatalog>AGROVOC</CoVaMOWL-SemanticDataManagement:hasSourceCatalog>
